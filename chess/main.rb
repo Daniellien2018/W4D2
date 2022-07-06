@@ -1,16 +1,20 @@
-require_relative "./lib/bishop.rb"
+require_relative "./lib/piece.rb"
 require_relative "./lib/board.rb"
 require_relative "./lib/display.rb"
-require_relative "./lib/king.rb"
-require_relative "./lib/knight.rb"
-require_relative "./lib/pawn.rb"
-require_relative "./lib/queen.rb"
-require_relative "./lib/rook.rb"
+
+require_relative "./lib/piece.rb"
 
 
-b = Board.start_chess
-board = Display.new(b)
-puts board.render
+# b = Board.start_chess
+# board = Display.new(b)
+# puts board.render
+
+b = Board.new
+b[[0,0]] = Rook.new(b, [0,0] :black)
+b[[0,0]].
 
 
 
+piece = b[[0,0]]
+puts piece.enemy?([0,1])
+puts piece.enemy?([0,0])

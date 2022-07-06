@@ -1,8 +1,5 @@
-class Knight
-    def initialize(color)
-        @color = color
-    end
-
+class Knight < Piece
+    
     def to_s
         color == :black ? "♘" : "♞"
     end

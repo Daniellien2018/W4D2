@@ -1,7 +1,5 @@
-class Pawn
-    def initialize(color)
-        @color = color
-    end
+class Pawn < Piece
+    
 
     def to_s
         color == :black ? "♙" : "♟"

@@ -1,8 +1,5 @@
-class Bishop
-    def initialize(color)
-        @color = color
-    end
-
+class Bishop < Piece
+  
     def to_s
         color == :black ? "♗" : "♝"
     end

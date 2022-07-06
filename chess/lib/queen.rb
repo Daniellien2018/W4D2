@@ -1,7 +1,5 @@
-class Queen
-    def initialize(color)
-        @color = color
-    end
+class Queen < Piece
+   
 
     def to_s
         color == :black ? "♕" : "♛"
