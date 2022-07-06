@@ -1,4 +1,8 @@
+require_relative 'piece'
+require_relative 'stepable.rb'
 class King < Piece
+
+    include Stepable
     
     def to_s
         color == :black ? "♔" : "♚"

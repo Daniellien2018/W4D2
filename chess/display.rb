@@ -1,3 +1,4 @@
+require_relative "board.rb"
 class Display
     attr_reader :board
     def initialize(board)

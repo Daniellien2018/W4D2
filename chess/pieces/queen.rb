@@ -1,5 +1,7 @@
+require_relative 'piece'
+require_relative 'slideable.rb'
 class Queen < Piece
-   
+    include Slideable
 
     def to_s
         color == :black ? "♕" : "♛"
