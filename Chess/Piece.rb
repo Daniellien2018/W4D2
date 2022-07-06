@@ -1,19 +1,19 @@
-# require_relative 'board.rb'
-module Slidable
-
 class Piece
     
     def initialize(color, board, pos)
         @symbol = color
         @board = board
         @pos = pos
+
+        board.add_piece(self,pos)
     end
 
     def to_s
-        
+        symbol.to_s
     end
 
     def empty?
+        false
     end
 
     def valid_moves

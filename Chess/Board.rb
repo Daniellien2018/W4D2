@@ -33,7 +33,10 @@ class Board
     end
 
     def add_piece(piece, pos)
-        
+        if empty?(pos)
+            self[pos] = piece
+        end
+        raise 'position is not empty'
     end
 
     def checkmate?(color)

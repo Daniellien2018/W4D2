@@ -1,9 +1,10 @@
-
+require_relative 'piece'
+require_relative 'stepable'
 
 class King < Piece
-
+    include stepable
     def symbol
-        "K"
+        "K".colorize(color)
     end
 
     protected
