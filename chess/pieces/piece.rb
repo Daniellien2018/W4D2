@@ -11,7 +11,15 @@ class Piece
 
 
     def enemy?(position)
-        board[position].color != color
+        board[position].color != color &&  !board.empty?(position)
+    end
+
+    def current_row
+        position.first
+    end
+
+    def current_col
+        position.last
     end
 
 end

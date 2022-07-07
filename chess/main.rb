@@ -20,5 +20,10 @@ require_relative "display"
 b = Board.start_chess
 
 board = Display.new(b)
-
+b[[2,0]]=Pawn.new(board, [2, 0], :white)
 p board.render
+
+
+
+
+p b[[1,1]].available_moves

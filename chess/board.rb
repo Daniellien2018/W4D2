@@ -3,7 +3,7 @@ require_relative "pieces"
 
 class Board
     # get the reader
-    attr_reader :grid
+    attr_reader :grid 
 
     def self.start_chess
         board = self.new
@@ -31,7 +31,7 @@ class Board
 
     # initialize the board, which has size = 8 * 8
     def initialize
-        @grid = Array.new(8) {Array.new(8)} #nilpiece
+        @grid = Array.new(8) {Array.new(8, NullPiece.instance)} #nilpiece
     end
 
     #define the braket method to find out the value at required position.
@@ -58,7 +58,7 @@ class Board
 
     def empty?(pos)
         row, col = pos
-        grid[row][col].nil? # nilpiece
+        grid[row][col] == NullPiece.instance
     end
 
     def move_piece(start_pos, end_pos)
